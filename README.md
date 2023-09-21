@@ -7,5 +7,5 @@ All CRUD operations are implemented on the users, hotels and ratings services on
 # Databases:
 MySql, Postgres and MongoDB
 
-# Spring dependencies:
+# Spring-Boot dependencies:
 Lombok, Spring Cloud, Sping Web, Spring Data Jpa, Eureka Discovery Server, Eureka Client
