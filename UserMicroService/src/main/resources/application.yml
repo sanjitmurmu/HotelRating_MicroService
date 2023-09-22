@@ -27,5 +27,14 @@ eureka:
   fetchRegistry: true
   service-url:
    defaultZone: http://localhost:8761/eureka 
+
+#Accutators   
+management:
+  endpoints:
+    enabled-by-default: false
+  endpoint:
+    info:
+      enabled: true
+
   
   
