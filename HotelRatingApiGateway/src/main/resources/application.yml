@@ -4,6 +4,8 @@ server:
 spring:
  application:
   name: API-GATEWAY
+ config:
+  import: optional:configserver:http://localhost:8085
   
 #cloud gateway:
  cloud:
@@ -25,12 +27,21 @@ spring:
      - Path=/ratings/**
   
 #eureka client :
-eureka:
- instance:
-  prefer-ip-address: true
- client:
-  register-with-eureka: true
-  fetchRegistry: true
-  service-url:
-   defaultZone: http://localhost:8761/eureka 
-   
+#eureka:
+# instance:
+#  prefer-ip-address: true
+# client:
+#  register-with-eureka: true
+#  fetchRegistry: true
+#  service-url:
+#   defaultZone: http://localhost:8761/eureka 
+
+#okta configuration for api gateway
+
+okta:
+ oauth2:
+  issuer: https://dev-09409811.okta.com/oauth2/default
+  audience: api://default
+  client-id: 0oablunl4hwFdjzVn5d7
+  client-secret: GO2U9VkUw5uQTgsnEqXZGrd0By8R4E6IsXJ_lj7H1Sxt8vHdibP9KcW2fLsjtSkV
+  scopes: openid, profile, email, offline_access

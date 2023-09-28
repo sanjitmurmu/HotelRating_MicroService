@@ -8,20 +8,22 @@ spring:
   url: jdbc:postgresql://localhost:5432/microservice
   username: postgres
   password: root
+ config:
+  import: optional:configserver:http://localhost:8085
   
  jpa:
   hibernate:
    ddl-auto: update
   show-sql: true
   
-eureka:
- instance:
-  prefer-ip-address: true
- client:
-  register-with-eureka: true
-  fetchRegistry: true
-  service-url:
-   defaultZone: http://localhost:8761/eureka 
+#eureka:
+# instance:
+#  prefer-ip-address: true
+# client:
+#  register-with-eureka: true
+#  fetchRegistry: true
+#  service-url:
+#   defaultZone: http://localhost:8761/eureka 
    
    
 management:
